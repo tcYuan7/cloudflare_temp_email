@@ -67,7 +67,7 @@ jobs:
           pnpm run deploy
           echo "Deployed for tag ${{ github.ref_name }}"
         env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           # ✅ 将 secret 映射到环境变量中
-          WRANGLER_TOML_CONTENT: ${{ secrets.BACKEND_TOML }}
+          WRANGLER_TOML_CONTENT: ${{ secrets.BACKEND_TOML  }}
